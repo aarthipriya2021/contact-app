@@ -6,12 +6,12 @@ const Home = ({ contacts, deleteContact }) => {
   return (
     <div className="container">
       <div className="row d-flex flex-column">
-        {/* <div className="col-md-12 my-5 text-right"> */}
-        <Link to="/add"  className="btn  btn-dark btn-sm ">
+        <div class=" my-4 ">
+        <Link to="/add"  className="btn btn-dark ">
             Add Contact
           </Link>
-        {/* </div> */}
-        <div className="col-md-10 mx-auto my-5">
+        </div>
+        <div className="col-md-10 mx-auto my-2">
           <table className="table table-hover">
             <thead className="table-header text-center bg-dark text-white">
               <tr>
@@ -31,19 +31,21 @@ const Home = ({ contacts, deleteContact }) => {
                     <td>{contact.email}</td>
                     <td>{contact.phone}</td>
                     <td>
-                      <Link
-                        to={`/edit/${contact.id}`}
-                        className="btn btn-small btn-primary mr-2"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        type="button"
-                        onClick={() => deleteContact(contact.id)}
-                        className="btn btn-small btn-danger "
-                      >
-                        Delete
-                      </button>
+                      <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <Link
+                          to={`/edit/${contact.id}`}
+                          className="btn btn-small btn-primary mr-2"
+                        >
+                          Edit
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => deleteContact(contact.id)}
+                          className="btn btn-small btn-danger "
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 )) 
