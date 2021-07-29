@@ -7,11 +7,11 @@ const Home = ({ contacts, deleteContact }) => {
     <div className="container">
       <div className="row d-flex flex-column">
         {/* <div className="col-md-12 my-5 text-right"> */}
-          <Link to="/add" className="btn btn-outline-dark my-5 ml-auto ">
+        <Link to="/add"  className="btn  btn-dark btn-sm ">
             Add Contact
           </Link>
         {/* </div> */}
-        <div className="col-md-10 mx-auto my-4">
+        <div className="col-md-10 mx-auto my-5">
           <table className="table table-hover">
             <thead className="table-header text-center bg-dark text-white">
               <tr>
@@ -55,7 +55,7 @@ const Home = ({ contacts, deleteContact }) => {
             </tbody>
           </table>
           </div>
-        
+      
       </div>
     </div>
   );
